@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <link rel="stylesheet"href="login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="continer" id="continer">
+    <div class="form-continer sign-up-continer">
+    <h1>LOG-IN</h1>
+
+    <form action ="/login" methon="post">
+
+    <input type="text" name="name" placeholder="name">
+    <input type="password" name="password" placeholder="password">
+    {{!-- <input type="submit"> --}}
+    <buttom>login</buttom>
+    </form>
+    </div>
+    </div>
+    <div class="form-continer sign-up-continer">
+    <h1>SIGN-IN</h1>
+
+    <form action ="/singup" methon="post">
+
+    <input type="text" name="name" placeholder="name">
+    <input type="password" name="password" placeholder="password">
+    {{!-- <input type="submit"> --}}
+    <buttom>signin </buttom>
+    </form>
+    </div>
+<div class ="overlay-continer">
+    <div class="overlay">
+        <div class="overlay-panel overlay-left">
+            <h1>WELCOME TO ORU WEBSITE</h1>
+            <button class="press"id="signin">signin</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+            <h1>TRAVEL UR HAPPY PALCES</h1>
+            <button class="press"id="signUP">signup</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const signupbutton=document.getElementById('signup');
+    const signIpButton=document.getElementById('signin');
+    const continer=document.getElementById('continer');
+
+    signIpButton.addEventListener('click',()=>{
+        continer.classList.add('rigth-panel-active');
+    })
+     signIpButton.addEventListener('click',()=>{
+        continer.classList.remove('rigth-panel-active');
+    })
+</script>
+
+    {{!-- <a href="./signup.hbs">make a new account</a> --}}
+    <a href="./home.hbs"></a>
+</body>
+</html>
